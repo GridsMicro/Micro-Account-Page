@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: "Micro Account",
-  description: "ระบบบัญชีออนไลน์ที่รวดเร็ว ปลอดภัย และใช้งานง่าย สำหรับธุรกิจยุคใหม่",
+  description: "ระบบบัญชีออนไลน์โฉมใหม่ เสริมพลังด้วย Dragon AI Assistant ที่ช่วยให้การจัดการภาษี (3% WHT) และงานเอกสาร B2B เป็นเรื่องง่าย รวดเร็ว และแม่นยำที่สุด",
   company: "Microtronic Co., Ltd.",
   contact: {
     email: "support@microtronic.dev", // Using the domain of the user's microtronic.dev workspace
@@ -8,9 +8,9 @@ export const siteConfig = {
     address: "อาคาร 123 ถนนสุขุมวิท เขตวัฒนา กรุงเทพมหานคร 10110",
   },
   links: {
-    app: "https://micro-account.vercel.app/",
+    app: "#",
     github: "https://github.com/GridsMicro/Micro-Account",
-    demo: "https://micro-account.vercel.app/", // Could point to an interactive demo path later
+    demo: "#", // ซ่อนไว้ก่อนจนกว่าจะ Stable
   },
   nav: [
     { name: "ฟีเจอร์การใช้งาน", href: "#features" },
@@ -19,6 +19,16 @@ export const siteConfig = {
     { name: "ติดต่อเรา", href: "#contact" },
   ],
   features: [
+    {
+      title: "Dragon AI: ผู้ช่วยบัญชีอัจฉริยะ",
+      description: "ปรึกษางานบัญชีและออกเอกสารได้ทันใจผ่านคำสั่งแชท เข้าใจโมเดลธุรกิจตัวกลาง และกฎหมายภาษี 3% (WHT) อย่างลึกซึ้ง",
+      iconType: "sparkles",
+    },
+    {
+      title: "ระบบจัดการสิทธิ์แบบละเอียด (RBAC)",
+      description: "กำหนดกลุ่มผู้ใช้ สิทธิ์การเข้าถึงแต่ละโมดูลได้ละเอียดถึงระดับ Create, Read, Update, Delete, Export, Manage",
+      iconType: "shield",
+    },
     {
       title: "บันทึกบัญชีง่ายและแม่นยำ",
       description: "รองรับระบบลงสมุดรายวันอัตโนมัติ (Double-entry) ช่วยลดข้อผิดพลาด ลดปัญหาการทำงานซ้ำซ้อน",
@@ -58,13 +68,14 @@ export const siteConfig = {
       description: "สำหรับธุรกิจขนาดเล็กและขนาดกลางที่ต้องการฟีเจอร์ครบ",
       features: [
         "ผู้ใช้งานสูงสุด 5 บัญชี",
+        "ระบบจัดการกลุ่มผู้ใช้และสิทธิ์ (RBAC)",
         "ระบบบัญชีคู่ (Double-entry) เต็มรูปแบบ",
         "ออกเอกสารไม่จำกัดจำนวน",
         "รายงานทางบัญชีและภาษีฉบับเต็ม",
         "พื้นที่จัดเก็บข้อมูล 10GB",
-        "แบคอัพข้อมูลรายวันและตั้งค่าสิทธิ์ผู้แต่ง",
+        "แบคอัพข้อมูลรายวัน",
       ],
-      cta: "เริ่มทดลองใช้งานฟรี 14 วัน",
+      cta: "สมัครใช้งานเลย",
       href: "https://micro-account.vercel.app/",
       popular: true,
     },
@@ -75,6 +86,7 @@ export const siteConfig = {
       description: "โซลูชันออกแบบเฉพาะสำหรับองค์กร",
       features: [
         "ผู้ใช้งานไม่จำกัดจำนวน",
+        "ระบบจัดการสิทธิ์แบบละเอียด (Granular RBAC)",
         "API เชื่อมต่อระบบ ERP อื่นๆ",
         "จัดการหลายบริษัท (Multi-company)",
         "พื้นที่จัดเก็บข้อมูลไม่จำกัด",
@@ -89,6 +101,11 @@ export const siteConfig = {
     title: "ความปลอดภัยที่เชื่อถือได้",
     items: [
       {
+        title: "ระบบกำหนดสิทธิ์แบบละเอียด (RBAC)",
+        description: "จัดการกลุ่มผู้ใช้ กำหนดสิทธิ์การเข้าถึงแต่ละโมดูลได้ละเอียดถึง 6 ระดับ: Create, Read, Update, Delete, Export, Manage ควบคุมการเข้าถึงข้อมูลสำคัญได้อย่างมืออาชีพ",
+        iconType: "lock",
+      },
+      {
         title: "การเข้ารหัสระดับ 256-bit",
         description: "ข้อมูลทางบัญชีของคุณจะถูกเข้ารหัสระดับมาตรฐาน AES-256 ผ่านโปรโตคอลการเข้ารหัส SSL/TLS เพื่อป้องกันการเข้าถึงจากบุคคลภายนอก",
         iconType: "shield",
@@ -97,11 +114,6 @@ export const siteConfig = {
         title: "การสำรองข้อมูล (Automated Backups)",
         description: "ข้อมูลบัญชีของคุณถูกสำรองอัตโนมัติทั้งแบบรายวันและรายชั่วโมงแยกเซิร์ฟเวอร์ (Off-site Backups) หมดกังวลเรื่องรับมือกับภัยคุกคาม",
         iconType: "server",
-      },
-      {
-        title: "ระบบกำหนดสิทธิ์การเข้าถึง (RBAC)",
-        description: "จำกัดการเข้าถึงข้อมูลละเอียดอ่อน แบ่งบัญชีผู้ดูแล นักบัญชีและผู้ปฏิบัติงาน (Role-Based Access Control) ตามตำแหน่งหน้าที่",
-        iconType: "lock",
       },
     ],
   },

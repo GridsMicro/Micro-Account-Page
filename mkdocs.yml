@@ -1,7 +1,7 @@
 site_name: "Micro-Account Expert Manual"
 site_description: "คู่มือการใช้งานระบบบัญชีนวัตกรรมโลกใหม่ สำหรับธุรกิจยุค Autonomous"
 site_author: "Microtronic Thailand"
-site_url: "https://gridsmicro.github.io/Micro-Account/"
+site_url: "https://gridsmicro.github.io/micro-account-page/"
 
 theme:
   name: material
@@ -38,7 +38,8 @@ nav:
   - 📄 คู่มือการใช้งาน:
       - การออกใบแจ้งหนี้ (Invoice): invoice.md
       - การรับชำระเงินและใบเสร็จ (Payment): payment.md
-      - สมุดบัญชีรายวัน (Journals): docs/accounting/journals.md
+      - สมุดบัญชีรายวัน (Journals): accounting/journals.md
+      - ความรู้ทางบัญชี: accounting/knowledge.md
       - ภาษีและการส่งออก (Tax & E-Filing): tax.md
   - ⚙️ การตั้งค่าระบบ:
       - คู่มือเชื่อมต่อบอท Finance: settings.md

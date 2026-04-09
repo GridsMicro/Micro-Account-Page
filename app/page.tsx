@@ -27,12 +27,7 @@ export default function Home() {
             ))}
           </div>
           <div className="flex items-center gap-3">
-            <a href={siteConfig.links.app} className="hidden sm:inline-flex px-5 py-2.5 text-sm font-medium rounded-full bg-white/10 hover:bg-white/20 border border-white/10 backdrop-blur-md transition-all text-white">
-              เข้าสู่ระบบ
-            </a>
-            <a href={siteConfig.links.demo} className="px-5 py-2.5 text-sm font-bold rounded-full bg-blue-600 hover:bg-blue-500 transition-all text-white">
-              ทดลอง Demo ฟรี
-            </a>
+            {/* Action buttons hidden until production stable */}
           </div>
         </nav>
 
@@ -40,28 +35,18 @@ export default function Home() {
         <section className="py-24 md:py-36 flex flex-col items-center text-center">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-8">
             <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse" />
-            V1.0 Early Access ยุคใหม่แห่งการทำบัญชี
+            V1.0 พร้อมระบบจัดการสิทธิ์แบบละเอียด (RBAC)
           </div>
           <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-8 leading-tight">
             ระบบบัญชีออนไลน์ที่รวดเร็ว <br className="hidden md:block" />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-teal-400 to-emerald-400">สำหรับธุรกิจยุคใหม่</span>
           </h1>
-          <p className="text-lg md:text-xl text-slate-400 max-w-2xl mb-12">
-            {siteConfig.description}
-          </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <a href={siteConfig.links.app} className="px-8 py-4 rounded-full bg-gradient-to-r from-blue-600 to-teal-500 font-bold text-white shadow-[0_0_40px_-10px_rgba(59,130,246,0.5)] hover:scale-105 transition-transform text-center flex items-center justify-center gap-2">
+            <a href="#contact" className="px-8 py-4 rounded-full bg-gradient-to-r from-blue-600 to-teal-500 font-bold text-white shadow-[0_0_40px_-10px_rgba(59,130,246,0.5)] hover:scale-105 transition-transform text-center flex items-center justify-center gap-2">
               <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
-              เริ่มสมัครใช้งาน
-            </a>
-            <a href={siteConfig.links.demo} className="px-8 py-4 rounded-full bg-slate-800/50 hover:bg-slate-800 border border-slate-700 font-bold text-white backdrop-blur-sm transition-all text-center flex items-center justify-center gap-2">
-              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-              </svg>
-              ดู Interactive Demo
+              ติดต่อสอบถาม/สั่งซื้อ
             </a>
           </div>
         </section>
@@ -98,20 +83,20 @@ export default function Home() {
             <h2 className="text-3xl md:text-4xl font-bold mb-4">ฟีเจอร์การทำงานหลัก</h2>
             <p className="text-slate-400">ถูกพัฒนามาเพื่อให้การทำบัญชีเป็นเรื่องที่ง่ายและทรงพลังที่สุด</p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {siteConfig.features.map((feature, idx) => (
               <div key={idx} className={`bg-slate-900/50 border border-slate-800 p-8 rounded-3xl backdrop-blur-md transition-colors group ${
-                idx === 0 ? "hover:border-blue-500/50" : idx === 1 ? "hover:border-teal-500/50" : "hover:border-emerald-500/50"
+                idx === 0 ? "hover:border-blue-500/50" : idx === 1 ? "hover:border-teal-500/50" : idx === 2 ? "hover:border-emerald-500/50" : "hover:border-violet-500/50"
               }`}>
                 <div className={`w-12 h-12 rounded-2xl flex items-center justify-center mb-6 transition-colors ${
-                  idx === 0 ? "bg-blue-500/20 group-hover:bg-blue-500/30" : idx === 1 ? "bg-teal-500/20 group-hover:bg-teal-500/30" : "bg-emerald-500/20 group-hover:bg-emerald-500/30"
+                  idx === 0 ? "bg-blue-500/20 group-hover:bg-blue-500/30" : idx === 1 ? "bg-teal-500/20 group-hover:bg-teal-500/30" : idx === 2 ? "bg-emerald-500/20 group-hover:bg-emerald-500/30" : "bg-violet-500/20 group-hover:bg-violet-500/30"
                 }`}>
                   <div className={`w-6 h-6 rounded-lg transition-transform group-hover:scale-110 ${
-                    idx === 0 ? "bg-blue-500" : idx === 1 ? "bg-teal-500" : "bg-emerald-500"
+                    idx === 0 ? "bg-blue-500" : idx === 1 ? "bg-teal-500" : idx === 2 ? "bg-emerald-500" : "bg-violet-500"
                   }`} />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
-                <p className="text-slate-400 leading-relaxed">{feature.description}</p>
+                <p className="text-slate-400 leading-relaxed text-sm">{feature.description}</p>
               </div>
             ))}
           </div>
@@ -169,7 +154,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-8">
              {siteConfig.testimonials.map((testi, i) => (
                 <div key={i} className="bg-slate-900/40 border border-slate-800 p-8 rounded-3xl backdrop-blur-md">
-                   <div className="text-blue-500 mb-6 font-serif text-5xl">"</div>
+                   <div className="text-blue-500 mb-6 font-serif text-5xl">&ldquo;</div>
                    <p className="text-lg text-slate-300 mb-8 italic">{testi.quote}</p>
                    <div className="flex gap-4 items-center">
                       <div className="w-12 h-12 bg-slate-800 rounded-full flex items-center justify-center font-bold text-slate-400">
@@ -217,11 +202,6 @@ export default function Home() {
                      </li>
                    ))}
                  </ul>
-                 <a href={plan.href} className={`w-full py-3 rounded-full text-center font-bold transition-all ${
-                   plan.popular ? "bg-blue-600 hover:bg-blue-500 text-white" : "bg-slate-800 hover:bg-slate-700 text-white"
-                 }`}>
-                   {plan.cta}
-                 </a>
                </div>
              ))}
           </div>

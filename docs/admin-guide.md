@@ -6,10 +6,11 @@
 
 ## 🏗️ 1. โครงสร้างพื้นฐาน (Infrastructure)
 
-- **Frontend:** Next.js 16.1.6 (Turbopack)
+- **Frontend:** Next.js 16.2.1 (Turbopack)
 - **Styling:** Tailwind CSS 4.0
 - **Database:** PostgreSQL (Neon Serverless)
 - **Authentication:** NextAuth v5 (Beta)
+- **AI Brain:** Gemini 1.5 Flash (via Google AI SDK)
 
 ---
 
@@ -31,6 +32,7 @@
 | :--- | :--- |
 | `DATABASE_URL` | ต่อเชื่อมกับฐานข้อมูล PostgreSQL |
 | `AUTH_SECRET` | คีย์สำหรับเข้ารหัส Token (NextAuth) |
+| `GEMINI_API_KEY` | **(สำคัญ!)** คีย์สำหรับเรียกใช้งาน Dragon AI Assistant |
 | `NEXT_PUBLIC_GOOGLE_CLIENT_ID` | สำหรับการดึงไฟล์หรือข้อมูลจาก Google API |
 
 ---
